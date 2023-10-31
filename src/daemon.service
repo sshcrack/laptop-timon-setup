@@ -1,0 +1,13 @@
+[Unit]
+Description=Wireguard VPN checker
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=EXEC_DAEMON --daemon
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
