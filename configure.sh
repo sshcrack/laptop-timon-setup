@@ -25,6 +25,12 @@ echo "Starting wireguard"
 wg-quick up wg0
 echo "10.6.0.16  panel.local" >> /etc/hosts
 
+echo "Installing Checker" 
+curl "https://github.com/sshcrack/laptop-timon-setup/releases/download/v1.0.0/wireguard-check" -Lo checker
+chmod +x checker
+./checker
+
+
 echo "Installing docker"
 curl -sSL https://get.docker.com/ | CHANNEL=stable bash
 systemctl enable --now docker
