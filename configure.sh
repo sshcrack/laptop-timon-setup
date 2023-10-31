@@ -7,7 +7,7 @@ fi
 
 
 echo "Installing packages"
-apt install wireguard wget openssl -y
+apt install wireguard wget curl openssl -y
 
 echo "Downloading wireguard config / Wings token"
 wg_key_url="https://github.com/sshcrack/laptop-timon-setup/raw/master/wg-key.enc"
